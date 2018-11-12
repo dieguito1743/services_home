@@ -41,6 +41,7 @@ public class ModulosCrud implements ICrud<ModulosDTO> {
             pst = (con = cnn.getCnn()).prepareStatement(SQLDefine.MODULOS_SQL_INSERT, PreparedStatement.RETURN_GENERATED_KEYS);
             pst.setString(1, objetoNuevo.getNombremodulo());
             pst.setInt(2, objetoNuevo.getNivelesmodulo());
+            pst.setString(3,objetoNuevo.getPage());
             if (pst.executeUpdate() > 0) {
                 rs = pst.getGeneratedKeys();
                 if (rs != null && rs.next()) {
@@ -68,7 +69,8 @@ public class ModulosCrud implements ICrud<ModulosDTO> {
             pst = (con = cnn.getCnn()).prepareStatement(SQLDefine.MODULOS_SQL_UPDATE);
             pst.setString(1, objetoActualizar.getNombremodulo());
             pst.setInt(2, objetoActualizar.getNivelesmodulo());
-            pst.setInt(3, objetoAntiguo.getIdmodulo());
+            pst.setString(3, objetoActualizar.getPage());
+            pst.setInt(4, objetoAntiguo.getIdmodulo());
             if (pst.executeUpdate() > 0) {
                 retorno = true;
             }
@@ -100,7 +102,7 @@ public class ModulosCrud implements ICrud<ModulosDTO> {
             rs = pst.executeQuery();
             arrayListRetorno = new ArrayList();
             while (rs.next()) {
-                objetoDTO = new ModulosDTO(rs.getInt(1), rs.getString(2), rs.getInt(3));
+                objetoDTO = new ModulosDTO(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getString(4));
                 arrayListRetorno.add(objetoDTO);
             }
             System.out.println(pst);
@@ -128,7 +130,7 @@ public class ModulosCrud implements ICrud<ModulosDTO> {
             rs = pst.executeQuery();
             arrayListRetorno = new ArrayList();
             while (rs.next()) {
-                objetoDTO = new ModulosDTO(rs.getInt(1), rs.getString(2), rs.getInt(3));
+                objetoDTO = new ModulosDTO(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getString(4));
                 arrayListRetorno.add(objetoDTO);
             }
             System.out.println(pst);
@@ -154,7 +156,7 @@ public class ModulosCrud implements ICrud<ModulosDTO> {
             pst.setInt(1, Integer.parseInt(primaryKey.toString()));
             rs = pst.executeQuery();
             if (rs.next()) {
-                objetoDTO = new ModulosDTO(rs.getInt(1), rs.getString(2), rs.getInt(3));
+                objetoDTO = new ModulosDTO(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getString(4));
             }
             System.out.println(pst);
         } catch (SQLException ex) {

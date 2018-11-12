@@ -83,6 +83,14 @@ public class SQLFunction {
                     condicion = condicion + " AND nivelmodulo = " + objectDTO.getNivelesmodulo();
                 }
             }
+            if (objectDTO.getPage()!= null && !objectDTO.getPage().equalsIgnoreCase("")) {
+                if (pand) {
+                    condicion = condicion + " page = '" + objectDTO.getNombremodulo() + "'";
+                    pand = false;
+                } else {
+                    condicion = condicion + " AND page = '" + objectDTO.getNombremodulo() + "'";
+                }
+            }
             condicion = condicion + " ) ";
         }
         condicion = limpiarCondicion(condicion);

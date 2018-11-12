@@ -10,10 +10,10 @@ package com.pe.modelo.dto;
  */
 public class RolesDTO {
 
-    int idrol = -1;
-    UsuariosDTO usuario = null;//int idusuario;
-    ModulosDTO modulo = null;//int idmodulo;
-    int nivelModulo = -1;
+    private int idrol = -1;
+    private UsuariosDTO usuario = null;//int idusuario;
+    private ModulosDTO modulo = null;//int idmodulo;
+    private int nivelModulo = -1;
 
     public RolesDTO() {
     }

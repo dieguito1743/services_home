@@ -10,14 +10,14 @@ package com.pe.modelo.dto;
  */
 public class UsuariosDTO {
 
-    int idusuario = -1;
-    int tipousuario = -1;
-    String nombreusuario = "";
-    String apellidousuario = "";
-    String accusuario = "";
-    String passusuario = "";
-    String telefonousuario = "";
-    String correousuario = "";
+    private int idusuario = -1;
+    private int tipousuario = -1;
+    private String nombreusuario = "";
+    private String apellidousuario = "";
+    private String accusuario = "";
+    private String passusuario = "";
+    private String telefonousuario = "";
+    private String correousuario = "";
 
     public UsuariosDTO() {
     }

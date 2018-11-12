@@ -12,12 +12,12 @@ import java.sql.Date;
  */
 public class ServiciosDTO {
 
-    int idservicio = -1;
-    String nombreservicio = "";
-    Date fecharegistroservicio = null;
-    Date fechaaltaservicio = null;
-    int estadoservicio = -1;
-    String descripcion = "";
+    private int idservicio = -1;
+    private String nombreservicio = "";
+    private Date fecharegistroservicio = null;
+    private Date fechaaltaservicio = null;
+    private int estadoservicio = -1;
+    private String descripcion = "";
 
     public ServiciosDTO() {
     }

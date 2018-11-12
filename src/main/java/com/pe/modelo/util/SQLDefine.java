@@ -16,18 +16,18 @@ public class SQLDefine {
     public static final String MYSQL = "mysql";
     public static final String MODULOS_SQL_INSERT = "INSERT "
             + "INTO modulos "
-            + "(nombremodulo, nivelesmodulo) "
-            + "VALUES (?,?) ";
+            + "(nombremodulo, nivelesmodulo, page) "
+            + "VALUES (?,?,?) ";
     public static final String MODULOS_SQL_UPDATE = "UPDATE "
             + "modulos "
-            + "SET nombremodulo = ?, nivelesmodulo = ? "
+            + "SET nombremodulo = ?, nivelesmodulo = ?, page = ? "
             + "WHERE idmodulo = ? ";
     public static final String MODULOS_SQL_SELECT = "SELECT "
-            + "idmodulo, nombremodulo, nivelesmodulo "
+            + "idmodulo, nombremodulo, nivelesmodulo, page "
             + "FROM modulos "
             + "WHERE idmodulo = ? ";
     public static final String MODULOS_SQL_CONSULTAR_TODO = "SELECT "
-            + "idmodulo, nombremodulo, nivelesmodulo "
+            + "idmodulo, nombremodulo, nivelesmodulo, page "
             + "FROM modulos ";
     public static final String RECIBOS_SQL_INSERT = "INSERT "
             + "INTO recibos "

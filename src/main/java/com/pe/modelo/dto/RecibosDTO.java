@@ -12,19 +12,19 @@ import java.sql.Date;
  */
 public class RecibosDTO {
 
-    int idrecibo = -1;
-    Usuarios_ServiciosDTO usuario_servicio = null;//int idusuario_servicio;
-    ServiciosDTO servicio = null;//int idservicio;
-    int periodorecibo = -1;
-    int medicioninicial = -1;
-    int medicionfinal = -1;
-    Date fechami = null;
-    Date fechamf = null;
-    int montorecibo = -1;
-    int consumorecibo = -1;
-    int preciounidad = -1;
-    Date fechavencimiento = null;
-    int estadorecibo = -1;
+    private int idrecibo = -1;
+    private Usuarios_ServiciosDTO usuario_servicio = null;//int idusuario_servicio;
+    private ServiciosDTO servicio = null;//int idservicio;
+    private int periodorecibo = -1;
+    private int medicioninicial = -1;
+    private int medicionfinal = -1;
+    private Date fechami = null;
+    private Date fechamf = null;
+    private int montorecibo = -1;
+    private int consumorecibo = -1;
+    private int preciounidad = -1;
+    private Date fechavencimiento = null;
+    private int estadorecibo = -1;
 
     public RecibosDTO() {
     }

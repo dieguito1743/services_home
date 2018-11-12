@@ -10,17 +10,19 @@ package com.pe.modelo.dto;
  */
 public class ModulosDTO {
 
-    int idmodulo = -1;
-    String nombremodulo = "";
-    int nivelesmodulo = -1;
+    private int idmodulo = -1;
+    private String nombremodulo = "";
+    private int nivelesmodulo = -1;
+    private String page = "";
 
     public ModulosDTO() {
     }
 
-    public ModulosDTO(int idmodulo, String nombremodulo, int nivelesmodulo) {
+    public ModulosDTO(int idmodulo, String nombremodulo, int nivelesmodulo, String page) {
         this.idmodulo = idmodulo;
         this.nombremodulo = nombremodulo;
         this.nivelesmodulo = nivelesmodulo;
+        this.page = page;
     }
 
     public int getIdmodulo() {
@@ -45,5 +47,13 @@ public class ModulosDTO {
 
     public void setNombremodulo(String nombremodulo) {
         this.nombremodulo = nombremodulo;
+    }
+
+    public String getPage() {
+        return page;
+    }
+
+    public void setPage(String page) {
+        this.page = page;
     }
 }

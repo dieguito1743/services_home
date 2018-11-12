@@ -12,12 +12,12 @@ import java.sql.Date;
  */
 public class Usuarios_ServiciosDTO {
 
-    int idusuario_servicio = -1;
-    ServiciosDTO servicio = null;//int idservicio;
-    UsuariosDTO usuario = null;//int idusuario;
-    Date fechainicio = null;
-    Date fechaalta = null;
-    int estado = -1;
+    private int idusuario_servicio = -1;
+    private ServiciosDTO servicio = null;//int idservicio;
+    private UsuariosDTO usuario = null;//int idusuario;
+    private Date fechainicio = null;
+    private Date fechaalta = null;
+    private int estado = -1;
 
     public Usuarios_ServiciosDTO() {
     }
